@@ -40,4 +40,5 @@ Organização de código seguindo a Clean Architecture
 📅 Progresso
 Você pode acompanhar meu progresso por meio dos commits. Cada commit representa uma aula ou um conceito novo aprendido.
 
-## 📚 Este é um projeto educativo, desenvolvido com fins de aprendizado durante o curso de Java da Rocketseat, todo e qualquer ensinamento é bem-vindo!
+## 📚 Projeto Educativo
+Este é um projeto educativo, desenvolvido com fins de aprendizado durante o curso de Java da Rocketseat, todo e qualquer ensinamento é bem-vindo!
