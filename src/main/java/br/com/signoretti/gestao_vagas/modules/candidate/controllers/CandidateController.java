@@ -3,7 +3,7 @@ package br.com.signoretti.gestao_vagas.modules.candidate.controllers;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import br.com.signoretti.gestao_vagas.modules.candidate.CandidateEntity;
-import br.com.signoretti.gestao_vagas.modules.candidate.useCases.createCandidateUseCase;
+import br.com.signoretti.gestao_vagas.modules.candidate.useCases.CreateCandidateUseCase;
 import jakarta.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,12 +18,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 public class CandidateController {
 
     @Autowired
-    private createCandidateUseCase createCandidateUseCase;
+    private CreateCandidateUseCase CreateCandidateUseCase;
     
     @PostMapping("/")
     public ResponseEntity<Object> create(@Valid @RequestBody CandidateEntity candidateEntity){
         try{
-            var result = this.createCandidateUseCase.execute(candidateEntity);
+            var result = this.CreateCandidateUseCase.execute(candidateEntity);
             return ResponseEntity.ok().body(result);
         }
         catch(Exception e){
