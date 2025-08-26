@@ -14,16 +14,18 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("/company")
 public class AuthCompanyController {
     
     @Autowired
     private AuthCompanyUseCase AuthCompanyUseCase;
-    @PostMapping("/company")
+    @PostMapping("/auth")
     public ResponseEntity<Object> create(@RequestBody AuthCompanyDTO authCompanyDTO){
         try{
         var result = this.AuthCompanyUseCase.execute(authCompanyDTO);
+        System.out.println("Retorno do UseCase: " + result); // debug
         return ResponseEntity.ok().body(result);
+        
 
         }catch (Exception e){
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(e.getMessage());
